@@ -1,0 +1,76 @@
+:root {
+  --dark-bg: hsl(0, 0%, 23%);
+  --light-bg: hsl(0, 0%, 70%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes bg-transition-dark-white {
+  from {
+    background-color: var(--dark-bg);
+  }
+  to {
+    background-color: var(--light-bg);
+  }
+}
+
+@keyframes bg-transition-white-dark {
+  from {
+    background-color: var(--light-bg);
+  }
+  to {
+    background-color: var(--dark-bg);
+  }
+}
+
+body {
+  background-color: var(--light-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20%;
+}
+
+.bg-dark {
+  animation: bg-transition-dark-white 1.5s forwards;
+}
+
+.bg-white {
+  animation: bg-transition-white-dark 1.5s forwards;
+}
+
+.container {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-theme {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.button-dark {
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+}
+.button-dark:hover {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.button-white {
+  background-color: white;
+  color: black;
+}
+.button-white:hover {
+  background-color: hsl(0, 0%, 80%);
+}
